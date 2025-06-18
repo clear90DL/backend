@@ -10,10 +10,10 @@ app.use(express.json());
 // Configuración de conexión usando pool
 const pool = mysql.createPool({
   connectionLimit: 10,
-  host: process.env.DB_HOST || "localhost",
-  user: process.env.DB_USER || "root",
-  password: process.env.DB_PASSWORD || "",
-  database: process.env.DB_NAME || "empleados"
+  host: process.env.DB_HOST,
+  user: process.env.DB_USER,
+  password: process.env.DB_PASSWORD,
+  database: process.env.DB_NAME
 });
 
 // Middleware para validar datos de empleado
